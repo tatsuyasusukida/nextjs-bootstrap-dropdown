@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gist": "gist -u 0b5ffc565ad80102fe9f40dca97f6780 pages/_app.tsx pages/index.tsx"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
