@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💧 How to use Bootstrap dropdown in Next.js
 
-## Getting Started
+## About this repository
 
-First, run the development server:
+This repository describes how to show and hide Bootstrap 5 [Dropdowns](https://getbootstrap.com/docs/5.2/components/dropdowns/) in Next.js. The related resource is shown below.
 
-```bash
+- [日本語版 / Japanese version](https://zenn.dev/tatsuyasusukida/articles/nextjs-bootstrap-dropdown)
+
+
+
+## Workflow
+
+The workflow is shown below.
+
+1. Coding preparation
+2. Coding
+3. Operation check
+
+
+
+## Coding preparation
+
+Run the following commands in your terminal to prepare for coding.
+
+```shell
+npx create-next-app nextjs-bootstrap-dropdown --typescript
+cd nextjs-bootstrap-dropdown
+npm install --save bootstrap
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Coding
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### pages/\_app.tsx
 
-## Learn More
+Open pages/\_app.tsx in you editor and enter the following content.
 
-To learn more about Next.js, take a look at the following resources:
+[Click to go to pages/\_app.tsx](https://github.com/tatsuyasusukida/nextjs-bootstrap-dropdown/blob/main/pages/_app.tsx)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### pages/index.tsx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Open pages/index.tsx in you editor and enter the following content.
 
-## Deploy on Vercel
+[Click to go to pages/index.tsx](https://github.com/tatsuyasusukida/nextjs-bootstrap-dropdown/blob/main/pages/index.tsx)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The points are shown below.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Create a state to show / hide the dropdown.
+2. Show or hide when the dropdown toggler is clicked.
+3. Hide the dropdown when the dropdown menu is clicked.
+4. Hide the dropdown when the non-menu area is clicked while the dropdown menu is displayed.
+
+
+
+## Operation check
+
+Go to http://localhost:3000/ in your browser.
+
+Check that the menu is displayed by clicking Dropdown at the top right of the screen.
+
+Check that the menu disappears when you click the drop-down menu or an area other than the menu.
+
+### Reference images
+
+![](https://github.com/tatsuyasusukida/nextjs-bootstrap-dropdown/blob/main/images/img-check-01.png)
+
+![](https://github.com/tatsuyasusukida/nextjs-bootstrap-dropdown/blob/main/images/img-check-02.png)
+
+
+
+## Conslusion
+
+If you use Next.js (React), it seems better to use [Chakui UI](https://chakra-ui.com/) or [Tailwind UI](https://tailwindui.com/). If you know of other good UI libraries, I would appreciate your guidance comments. Thank you for reading!
